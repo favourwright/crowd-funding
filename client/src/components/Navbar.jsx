@@ -2,7 +2,7 @@ import React, { useState } from 'react'
 import { Link, useNavigate } from 'react-router-dom';
 
 // import { useStateContext } from '../context';
-// import { CustomButton } from './';
+import { CustomButton } from './';
 import { logo, menu, search, thirdweb } from '../assets';
 import { navlinks } from '../constants';
 
@@ -25,7 +25,7 @@ const Navbar = () => {
       </div>
 
       <div className="sm:flex hidden flex-row justify-end gap-4">
-        {/* <CustomButton 
+        <CustomButton 
           btnType="button"
           title={address ? 'Create a campaign' : 'Connect'}
           styles={address ? 'bg-[#1dc071]' : 'bg-[#8c6dfd]'}
@@ -33,10 +33,10 @@ const Navbar = () => {
             if(address) navigate('create-campaign')
             else 'connect()'
           }}
-        /> */}
+        />
 
         <Link to="/profile">
-          <div className="w-[52px] h-[52px] rounded-full bg-[#2c2f32] flex justify-center items-center cursor-pointer">
+          <div className="w-[52px] h-[52px ] rounded-full bg-[#2c2f32] flex justify-center items-center cursor-pointer">
             <img src={thirdweb} alt="user" className="w-[60%] h-[60%] object-contain" />
           </div>
         </Link>
@@ -80,7 +80,7 @@ const Navbar = () => {
             </ul>
 
             <div className="flex mx-4">
-            {/* <CustomButton 
+            <CustomButton 
               btnType="button"
               title={address ? 'Create a campaign' : 'Connect'}
               styles={address ? 'bg-[#1dc071]' : 'bg-[#8c6dfd]'}
@@ -88,7 +88,7 @@ const Navbar = () => {
                 if(address) navigate('create-campaign')
                 else 'connect();'
               }}
-            /> */}
+            />
             </div>
           </div>
         </div>
