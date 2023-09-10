@@ -6,12 +6,17 @@ import { Sepolia } from "@thirdweb-dev/chains"
 
 import App from './App'
 import './index.css'
+import { StateContextProvider } from './context'
 
 const root = ReactDOM.createRoot(document.getElementById('root'))
 root.render(
-  <ThirdwebProvider ChainId={Sepolia.chainId}>
+  <ThirdwebProvider 
+    activeChain={ Sepolia } 
+    clientId="e3561f481dd549ea9f3caa7f8f33b597">
     <Router>
-      <App />
+      <StateContextProvider>
+        <App />
+      </StateContextProvider>
     </Router>
   </ThirdwebProvider>
 )
