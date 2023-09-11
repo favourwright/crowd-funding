@@ -1,8 +1,9 @@
 import React, { useState, useEffect } from 'react'
 import { useStateContext } from '../context'
+import { CampaignList } from '../components'
 
 const Home = () => {
-  const [isLoading, setIsLoading] = useState(false)
+  const [isLoading, setIsLoading] = useState(true)
   const [campaigns, setCampaigns] = useState([])
   const { contract, address, getCampaigns } = useStateContext()
 
@@ -19,7 +20,13 @@ const Home = () => {
 
 
   return (
-    <div>Home</div>
+    <div>
+      <CampaignList
+        title="All Campaigns"
+        campaigns={campaigns}
+        isLoading={isLoading}
+      />
+    </div>
   )
 }
 
