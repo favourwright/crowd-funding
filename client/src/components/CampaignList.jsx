@@ -7,7 +7,7 @@ const CampaignList = ({ title, campaigns, isLoading }) => {
   const navigate = useNavigate()
 
   const handleNavigate = (campaign) => {
-    navigate(`/campaign-details/${campaign.title}`, { state: campaign })
+    navigate(`/details/${campaign.title}`, { state: campaign })
   }
   
   return (
